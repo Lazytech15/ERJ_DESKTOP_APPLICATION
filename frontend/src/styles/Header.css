@@ -1,0 +1,111 @@
+#header-card {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-wrap {
+  width: 72px; height: 72px;
+  flex-shrink: 0;
+}
+.logo-wrap svg { width: 100%; height: 100%; }
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.brand .subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brown-primary);
+  margin-top: 2px;
+}
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.status-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--green-online);
+  box-shadow: 0 0 0 2px rgba(46,204,113,0.25);
+}
+.status-dot.offline {
+  background: var(--red-absent);
+  box-shadow: 0 0 0 2px rgba(231,76,60,0.25);
+}
+.status-label {
+  font-size: 13px;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.datetime-block {
+  text-align: right;
+}
+.date-str {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.time-str {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--brown-primary);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-color);
+  background: var(--card-bg);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-medium);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.action-btn:hover {
+  border-color: var(--brown-primary);
+  color: var(--brown-primary);
+  box-shadow: var(--shadow-sm);
+}
+.action-btn svg { width: 16px; height: 16px; }
+.action-btn svg.spinning { animation: spin 0.6s linear; }
