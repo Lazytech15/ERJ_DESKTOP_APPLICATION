@@ -13,7 +13,7 @@ This app is designed for front-desk / kiosk-style use at an office or worksite:
 
 ## Screenshot
 
-![App screenshot](./assets/screenshot.png)
+![App screenshot](https://github.com/user-attachments/assets/b4c732a5-e494-4477-967b-3c0cc60d1130)
 
 *(Replace `assets/screenshot.png` with an actual screenshot of the running app.)*
 
