@@ -1,6 +1,34 @@
 # ERJ Smart Solution – Attendance Management System
 
-React (Vite) frontend + Electron backend.
+A desktop attendance/time-tracking application for monitoring employee clock-ins, clock-outs, working hours, and daily attendance stats — built with a React (Vite) frontend and an Electron backend.
+
+## Purpose
+
+This app is designed for front-desk / kiosk-style use at an office or worksite:
+
+- Employees scan a barcode or enter their ID to clock in/out for the day.
+- A live dashboard shows who's currently clocked in, recent clock-outs, and daily stats (regular hours, overtime, present, late, absent).
+- Selecting an employee shows their details, current clock state, and a one-tap clock-in/out action.
+- Runs as a native desktop app (Windows/macOS/Linux) via Electron, so it can run on a dedicated kiosk machine without a browser.
+
+## Screenshot
+
+![App screenshot](./assets/screenshot.png)
+
+*(Replace `assets/screenshot.png` with an actual screenshot of the running app.)*
+
+## Tech Stack
+
+| Layer        | Technology                                         |
+|--------------|-----------------------------------------------------|
+| UI            | React 18                                            |
+| Build tool    | Vite 5                                              |
+| Desktop shell | Electron 38                                         |
+| Packaging     | electron-builder (NSIS / DMG / AppImage)            |
+| IPC bridge    | Electron `contextBridge` + `ipcRenderer` (preload)  |
+| Styling       | Plain CSS (per-component stylesheets, CSS variables)|
+| Backend libs  | axios, express, ws, xlsx, crypto-js, zod            |
+| Auto-update   | electron-updater + electron-log                     |
 
 ## Structure
 ```
@@ -48,6 +76,8 @@ npm start
 ```bash
 npm run dist
 ```
+
+See [COMMANDS.md](./COMMANDS.md) for the full command reference.
 
 ## IPC API (window.electronAPI)
 Exposed by `electron/preload.js`:
